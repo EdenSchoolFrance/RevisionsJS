@@ -40,3 +40,13 @@ let searchAlphabet = (alphabet, letter) => {
     return false;
   }
 };
+
+// const div = document.querySelector('div')
+// const div = document.body.childNodes[1]
+// const div = document.getElementsByClassName('container')
+// const div = document.getElementsByTagName("div")
+// const div = document.querySelector('.container')
+// const div = document.querySelectorAll('div')
+// const div = document.body.children[0]
+// const div = document.body.firstElementChild
+const div = document.getElementById("app")
