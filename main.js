@@ -48,9 +48,6 @@ qdiv.appendChild(input)
 const p = document.createElement('p')
 p.textContent=0
 qdiv.appendChild(p)
-input.addEventListener("input",()=>{
-  p.textContent=input.value.length
-})
 for (let i = 0; i < e.length; i++) {
   const cdiv = document.createElement("div")
   cdiv.className='cdiv'
@@ -61,3 +58,18 @@ for (let i = 0; i < e.length; i++) {
   qdiv.appendChild(cdiv)
   
 }
+const d=document.querySelectorAll('.cdiv')
+input.addEventListener("input",()=>{
+  p.textContent=input.value.length
+  for (let i = 0; i < e.length; i++) {
+    if(input.value.includes(e[i])){
+      d[i].style.display="inline-block"
+    }
+    else if(input.value==""){
+      d[i].style.display="inline-block"
+    }
+    else{
+      d[i].style.display="none"
+    }
+  }
+})

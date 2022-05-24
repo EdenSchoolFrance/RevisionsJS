@@ -23,6 +23,10 @@ p{
   background: gray;
   opacity: 50%;
 }
+input{
+  position:fixed;
+  margin: 0 -75px;
+}
 @media screen and (min-width: 768px) {
   .cdiv{
     width: 1%;
