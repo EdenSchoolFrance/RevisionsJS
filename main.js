@@ -22,4 +22,14 @@ function getAlphabet(){
   }
   return tmb.join("")
 }
-console.log(getAlphabet())
+//const parce que je ne pense pas la modifier
+const e = getAlphabet()
+function findLetter(a,b){
+  for(let i=0;i<a.length;i++){
+    if(a[i]===b){
+      const r=a.charCodeAt(i)
+      return String.fromCharCode(r)===b.toUpperCase()
+    }
+  }
+}
+console.log(findLetter(e,"a"))
