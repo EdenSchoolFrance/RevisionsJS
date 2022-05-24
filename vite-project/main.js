@@ -70,7 +70,8 @@ allLetter.forEach(e => {
   e.style.border = "1px solid black";
   e.style.display = "inline";
   e.style.margin = "1rem";
-  e.style.padding = "2rem";
+  e.style.width = "5rem";
+  e.style.height = "5rem";
 
   if (allLetter.length % 2 === 0) {
     console.log()
