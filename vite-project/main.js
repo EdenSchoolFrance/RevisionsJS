@@ -71,4 +71,8 @@ allLetter.forEach(e => {
   e.style.display = "inline";
   e.style.margin = "1rem";
   e.style.padding = "2rem";
+
+  if (allLetter.length % 2 === 0) {
+    console.log()
+  }
 })
