@@ -94,3 +94,14 @@ for(let i = 0; i < ptohave.length; i++){
     ptohave[i-1].style.background = "rgba(57, 56, 55, 0.5)"
   }
 }
+
+input.addEventListener("input", ()=>{
+  const allp = document.querySelectorAll("p");
+  for(let i = 0; i < allp.length; i++){
+    if(input.value.indexOf(allp[i].textContent) === -1){
+      allp[i].style.display = 'none'
+    } else{
+      allp[i].style.display = 'inline-block'
+    }
+  }
+})
