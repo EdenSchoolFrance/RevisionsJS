@@ -54,6 +54,9 @@ const alletter = getAlphabet()
 const div = document.getElementById("app");
 const input = document.createElement("input");
 const span = document.createElement("span")
+const check = document.createElement("input")
+check.type = 'checkbox'
+check.style.left = "75%"
 span.textContent = '0'
 span.style.textAlign = 'right'
 span.style.display = 'block'
@@ -62,6 +65,7 @@ span.style.marginTop = "50px"
 input.type = 'text';
 input.placeholder = "Saisissez des lettres"
 div.appendChild(input)
+div.appendChild(check)
 div.appendChild(span)
 
 input.addEventListener('input', ()=>{
@@ -108,4 +112,24 @@ input.addEventListener("input", ()=>{
       allp[i].style.display = 'inline-block'
     }
   }
+})
+
+check.addEventListener('click', ()=>{
+  const allp = document.querySelectorAll("p")
+  let voyelle = "AEIOUY"
+  if(check.checked){
+    for(let i = 0; i < allp.length; i++){
+      allp[i].style.background = 'none'
+      if(voyelle.indexOf(allp[i].textContent) !== -1){
+        allp[i].style.background = "red";
+        console.log(allp[i])
+      }
+    }
+  } else{
+    for(let i = 0; i < allp.length; i++){
+      allp[i].style.background = 'none'
+      if(voyelle.indexOf(allp[i].textContent) === -1){
+        allp[i].style.background = "green";
+      }
+  }}
 })
