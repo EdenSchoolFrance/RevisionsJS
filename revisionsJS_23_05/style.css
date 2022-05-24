@@ -1,8 +1,13 @@
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
+div {
+  max-width: 400px;
+  margin: 0 auto;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+}
+div p {
+  text-align: right;
+}
+
+div input{
+  width: 100%;
 }

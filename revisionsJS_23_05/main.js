@@ -49,4 +49,15 @@ let searchAlphabet = (alphabet, letter) => {
 // const div = document.querySelectorAll('div')
 // const div = document.body.children[0]
 // const div = document.body.firstElementChild
-const div = document.getElementById("app")
+
+const div = document.getElementById("app");
+const input = document.createElement("input");
+const p = document.createElement("p")
+input.type = 'text';
+input.placeholder = "Saisissez des lettres"
+div.appendChild(input)
+div.appendChild(p)
+
+input.addEventListener('input', ()=>{
+  p.textContent = input.value.length
+})
