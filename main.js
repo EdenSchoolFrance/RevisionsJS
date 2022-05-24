@@ -1,9 +1,6 @@
 import './style.css'
 
-document.querySelector('#app').innerHTML = `
-  <h1>Hello Vite!</h1>
-  <a href="https://vitejs.dev/guide/features.html" target="_blank">Documentation</a>
-`
+
 for (let i = 97; i < 123; i++) {
   console.log(String.fromCharCode(i))
 }
@@ -32,4 +29,19 @@ function findLetter(a,b){
     }
   }
 }
-console.log(findLetter(e,"a"))
+findLetter(e,"M")
+const container = document.getElementsByClassName('container')
+const contain = document.querySelectorAll('.container')
+const app = document.querySelectorAll('#app')
+const div = document.querySelectorAll('div')
+const tag =document.getElementsByTagName("div")
+
+console.log(document.getElementById('app'))
+console.log(container[0])
+console.log(document.querySelector('div'))
+console.log(document.querySelector('.container'))
+console.log(document.querySelector('#app'))
+console.log(contain[0])
+console.log(div[0])
+console.log(app[0])
+console.log(tag[0])
