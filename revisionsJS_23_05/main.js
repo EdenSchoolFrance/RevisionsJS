@@ -29,3 +29,9 @@ let getAlphabet = () =>{
   }
   return finalword
 }
+
+let searchAlphabet = (alphabet, letter)=>{
+  return alphabet.indexOf(letter)
+}
+
+searchAlphabet(getAlphabet(), "A")
