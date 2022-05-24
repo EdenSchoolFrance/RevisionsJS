@@ -49,87 +49,96 @@ let searchAlphabet = (alphabet, letter) => {
 // const div = document.querySelectorAll('div')
 // const div = document.body.children[0]
 // const div = document.body.firstElementChild
-const alletter = getAlphabet()
+const alletter = getAlphabet();
 
 const div = document.getElementById("app");
 const input = document.createElement("input");
-const span = document.createElement("span")
-const check = document.createElement("input")
-check.type = 'checkbox'
-check.style.left = "75%"
-span.textContent = '0'
-span.style.textAlign = 'right'
-span.style.display = 'block'
-span.style.width = "65%"
-span.style.marginTop = "50px"
-input.type = 'text';
-input.placeholder = "Saisissez des lettres"
-div.appendChild(input)
-div.appendChild(check)
-div.appendChild(span)
+const span = document.createElement("span");
+const check = document.createElement("input");
+check.type = "checkbox";
+check.style.left = "75%";
+span.textContent = "0";
+span.style.textAlign = "right";
+span.style.display = "block";
+span.style.width = "65%";
+span.style.marginTop = "50px";
+input.type = "text";
+input.placeholder = "Saisissez des lettres";
+div.appendChild(input);
+div.appendChild(check);
+div.appendChild(span);
 
-input.addEventListener('input', ()=>{
-  span.textContent = input.value.length
-})
+input.addEventListener("input", () => {
+  span.textContent = input.value.length;
+});
 
-for(let i = 0; i < alletter.length; i++){
+for (let i = 0; i < alletter.length; i++) {
   const p = document.createElement("p");
   p.textContent = alletter[i];
-  p.style.display = 'inline-block'
-  p.style.padding = "10px"
-  p.style.margin = '10px 20px'
-  div.appendChild(p)
+  p.style.display = "inline-block";
+  p.style.padding = "10px";
+  p.style.margin = "10px 20px";
+  div.appendChild(p);
 }
 
-window.addEventListener('resize', reportWindowSize =>{
-  console.log(window.innerWidth)
-  if(window.innerWidth <= 1224){
-    div.style.maxWidth = "900px"
+window.addEventListener("resize", (reportWindowSize) => {
+  console.log(window.innerWidth);
+  if (window.innerWidth <= 1224) {
+    div.style.maxWidth = "900px";
   }
-  if(window.innerWidth <= 900){
-    div.style.maxWidth = "450px"
-  }  if(window.innerWidth <= 480){
-    div.style.maxWidth = "200px"
+  if (window.innerWidth <= 900) {
+    div.style.maxWidth = "450px";
+  }
+  if (window.innerWidth <= 480) {
+    div.style.maxWidth = "200px";
   }
 });
 
-const ptohave = document.querySelectorAll("p")
-for(let i = 0; i < ptohave.length; i++){
-  if(i % 5 === 0 && i !== 0){
-    ptohave[i-1].style.background = "rgba(57, 56, 55, 0.5)"
+const ptohave = document.querySelectorAll("p");
+for (let i = 0; i < ptohave.length; i++) {
+  if (i % 5 === 0 && i !== 0) {
+    ptohave[i - 1].style.background = "rgba(57, 56, 55, 0.5)";
   }
 }
 
-input.addEventListener("input", ()=>{
+input.addEventListener("input", () => {
   const allp = document.querySelectorAll("p");
-  for(let i = 0; i < allp.length; i++){
-    if(input.value.length === 0){
-      allp[i].style.display = 'inline-block'
-    }
-    else if(input.value.indexOf(allp[i].textContent) === -1){
-      allp[i].style.display = 'none'
-    } else{
-      allp[i].style.display = 'inline-block'
+  for (let i = 0; i < allp.length; i++) {
+    if (input.value.length === 0) {
+      allp[i].style.display = "inline-block";
+    } else if (input.value.indexOf(allp[i].textContent) === -1) {
+      allp[i].style.display = "none";
+    } else {
+      allp[i].style.display = "inline-block";
     }
   }
-})
+});
 
-check.addEventListener('click', ()=>{
-  const allp = document.querySelectorAll("p")
-  let voyelle = "AEIOUY"
-  if(check.checked){
-    for(let i = 0; i < allp.length; i++){
-      allp[i].style.background = 'none'
-      if(voyelle.indexOf(allp[i].textContent) !== -1){
+check.addEventListener("click", () => {
+  const allp = document.querySelectorAll("p");
+  let voyelle = "AEIOUY";
+  if (check.checked) {
+    for (let i = 0; i < allp.length; i++) {
+      allp[i].style.background = "none";
+      if (voyelle.indexOf(allp[i].textContent) !== -1) {
         allp[i].style.background = "red";
-        console.log(allp[i])
+        console.log(allp[i]);
       }
     }
-  } else{
-    for(let i = 0; i < allp.length; i++){
-      allp[i].style.background = 'none'
-      if(voyelle.indexOf(allp[i].textContent) === -1){
+  } else {
+    for (let i = 0; i < allp.length; i++) {
+      allp[i].style.background = "none";
+      if (voyelle.indexOf(allp[i].textContent) === -1) {
         allp[i].style.background = "green";
       }
-  }}
-})
+    }
+  }
+});
+
+// input.addEventListener("input", ()=>{
+//   for(let i = 0; i < input.value.length; i++){
+//     if(input.value.indexOf(input.value[i] === 3)){
+//       alert("doublon")
+//     }
+//   }
+// })
