@@ -49,15 +49,41 @@ let searchAlphabet = (alphabet, letter) => {
 // const div = document.querySelectorAll('div')
 // const div = document.body.children[0]
 // const div = document.body.firstElementChild
+const alletter = getAlphabet()
 
 const div = document.getElementById("app");
 const input = document.createElement("input");
-const p = document.createElement("p")
+const span = document.createElement("span")
+span.textContent = '0'
+span.style.textAlign = 'right'
+span.style.display = 'block'
+span.style.width = "65%"
 input.type = 'text';
 input.placeholder = "Saisissez des lettres"
 div.appendChild(input)
-div.appendChild(p)
+div.appendChild(span)
 
 input.addEventListener('input', ()=>{
-  p.textContent = input.value.length
+  span.textContent = input.value.length
 })
+
+for(let i = 0; i < alletter.length; i++){
+  const p = document.createElement("p");
+  p.textContent = alletter[i];
+  p.style.display = 'inline-block'
+  p.style.padding = "10px"
+  p.style.margin = '10px 20px'
+  div.appendChild(p)
+}
+
+window.addEventListener('resize', reportWindowSize =>{
+  console.log(window.innerWidth)
+  if(window.innerWidth <= 1224){
+    div.style.maxWidth = "900px"
+  }
+  if(window.innerWidth <= 900){
+    div.style.maxWidth = "450px"
+  }  if(window.innerWidth <= 480){
+    div.style.maxWidth = "200px"
+  }
+});
