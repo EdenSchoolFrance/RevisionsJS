@@ -35,13 +35,26 @@ const contain = document.querySelectorAll('.container')
 const app = document.querySelectorAll('#app')
 const div = document.querySelectorAll('div')
 const tag =document.getElementsByTagName("div")
-
-console.log(document.getElementById('app'))
-console.log(container[0])
-console.log(document.querySelector('div'))
-console.log(document.querySelector('.container'))
-console.log(document.querySelector('#app'))
-console.log(contain[0])
-console.log(div[0])
-console.log(app[0])
-console.log(tag[0])
+const id=document.getElementById('app')
+const qdiv=document.querySelector('div')
+const qclass=document.querySelector('.container')
+const qid=document.querySelector('#app')
+const label=document.createElement("label")
+label.textContent='lorem impsum'
+qdiv.appendChild(label)
+const input=document.createElement("input")
+input.placeholder='"Saisissez des lettres"'
+qdiv.appendChild(input)
+const p = document.createElement('p')
+p.textContent=0
+qdiv.appendChild(p)
+input.addEventListener("input",()=>{
+  p.textContent=input.value.length
+})
+for (let i = 0; i < e.length; i++) {
+  const cdiv = document.createElement("div")
+  cdiv.className='cdiv'
+  cdiv.textContent=e[i]
+  qdiv.appendChild(cdiv)
+  
+}
