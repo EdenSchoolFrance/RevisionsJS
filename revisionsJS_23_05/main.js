@@ -87,3 +87,10 @@ window.addEventListener('resize', reportWindowSize =>{
     div.style.maxWidth = "200px"
   }
 });
+
+const ptohave = document.querySelectorAll("p")
+for(let i = 0; i < ptohave.length; i++){
+  if(i % 5 === 0 && i !== 0){
+    ptohave[i-1].style.background = "rgba(57, 56, 55, 0.5)"
+  }
+}
