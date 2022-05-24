@@ -18,5 +18,18 @@ const getAlphabet = () => {
     str += String.fromCharCode(i);
   }
   console.log(str);
+  return str;
 };
-getAlphabet();
+const alphabet = getAlphabet();
+// J'ai stocker le resultat dans une constante car il ne sera jamais modifier.
+const majmin = (str, letter) => {
+  let index = str.indexOf(letter);
+  let code = str.charCodeAt(index);
+  if (code >= 65 && code <= 90) {
+    console.log(true);
+  } else {
+    console.log(false);
+  }
+};
+
+majmin(alphabet, "j");
