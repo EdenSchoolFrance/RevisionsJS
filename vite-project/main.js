@@ -42,6 +42,8 @@ input.placeholder = "Saisissez des lettres";
 wayThree.appendChild(input);
 
 const div = document.createElement("div");
+div.style.display = "flex";
+div.style.flexWrap = "wrap";
 
 wayThree.appendChild(div);
 
@@ -59,5 +61,14 @@ for (let getAlphabets of getAlphabet().split("")) {
   const showAlphabet = document.createElement("p");
   showAlphabet.setAttribute("class", "allLetter");
   div.appendChild(showAlphabet);
-  showAlphabet  .innerHTML = getAlphabets;
+  showAlphabet.innerHTML = getAlphabets;
 }
+
+const allLetter = document.querySelectorAll(".allLetter");
+
+allLetter.forEach(e => {
+  e.style.border = "1px solid black";
+  e.style.display = "inline";
+  e.style.margin = "1rem";
+  e.style.padding = "2rem";
+})
