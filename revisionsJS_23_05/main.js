@@ -15,8 +15,8 @@ while(index <= 90){
 
 // function getALphabet 
 
-
 let getAlphabet = () =>{
+  // j'ai mit let en pour la varianle finalword car a chaque tour finalword change donc elle ne peut pas être une constante cue qu'une constante ne peut pas changer
   let finalword = ''
   for(let i = 65 ; i <= 90; i++){
     finalword += String.fromCharCode(i)
@@ -25,6 +25,4 @@ let getAlphabet = () =>{
     finalword += String.fromCharCode(i)
   }
   return finalword
-} 
-
-getAlphabet()
+}
