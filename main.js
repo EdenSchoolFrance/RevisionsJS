@@ -55,6 +55,9 @@ for (let i = 0; i < e.length; i++) {
   const cdiv = document.createElement("div")
   cdiv.className='cdiv'
   cdiv.textContent=e[i]
+  if(i%5===0){
+    cdiv.classList.add("gris")
+  }
   qdiv.appendChild(cdiv)
   
 }

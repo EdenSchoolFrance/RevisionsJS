@@ -19,11 +19,16 @@ p{
   width: auto;
   text-align: end;
 }
+.gris{
+  background: gray;
+  opacity: 50%;
+}
 @media screen and (min-width: 768px) {
   .cdiv{
     width: 1%;
     height: 38%;
     padding: 7%;
+    border: red 1px solid ;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -31,5 +36,6 @@ p{
     width: 1%;
     height: 38%;
     padding: 3.75%;
+    border: green 1px solid ;
   }
 }
