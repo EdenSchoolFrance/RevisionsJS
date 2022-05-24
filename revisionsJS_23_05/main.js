@@ -1,14 +1,15 @@
 import "./style.css";
 let resp1 = "";
 let resp2 = "";
-let div1 = document.querySelector('.container') ;
-let div2 = document.querySelectorAll('.container') ;
+// let div1 = document.querySelector('.container') ;
+// let div2 = document.querySelectorAll('.container') ;
 let div3 = document.getElementById('app');
-let div4 = document.getElementsByClassName('.container') ;
-let div5 = document.getElementsByTagName('div') ;
-let div6 = document.getElementsByClassName('.container') ;
-// let div7 = document. ;
-// let div8 = document. ;
+// let div4 = document.getElementsByClassName('.container') ;
+// let div5 = document.getElementsByTagName('div') ;
+// let div6 = document.getElementsByClassName('.container') ;
+// let body = document.body;
+// let div7 = body.lastChild ;
+// let div8 = document.nodeName ;
 // let div9 = document. ;
 
 
@@ -45,10 +46,10 @@ console.log(getAlphabet());
 
 const dyn = (getAlphabet) => {
   let respM;
-  for (let i = 0; i < getAlphabet().length; i++) {
-    respM = [i];
+  for (let i = 0; i < getAlphabet.length; i++) {
+    respM = getAlphabet([i]);
   }
   return respM;
 }
 
-console.log(dyn(getAlphabet()));
+let rob = div3.appendChild('input');
