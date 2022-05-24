@@ -7,6 +7,8 @@ for(let i = 97 ; i <= 122; i++){
 
 // De "A" à "Z" en majuscule
 
-for(let i = 65; i <= 90; i++){
-  console.log(String.fromCharCode(i))
+let index = 65;
+while(index <= 90){
+  console.log(String.fromCharCode(index))  
+  index++
 }
