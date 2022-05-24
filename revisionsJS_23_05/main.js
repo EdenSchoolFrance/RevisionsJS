@@ -11,8 +11,7 @@ import "./style.css";
 //   console.log(String.fromCharCode(count));
 // }
 
-const getAlphabet = () => {
-  let str = "";
+const getAlphabet = (str) => {
   for (let i = 65; i <= 122; i++) {
     if (i === 91) {
       i = 97;
@@ -22,4 +21,4 @@ const getAlphabet = () => {
   return str;
 };
 
-console.log(getAlphabet());
+console.log(getAlphabet(""));
