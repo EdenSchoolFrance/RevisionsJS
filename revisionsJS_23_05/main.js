@@ -58,6 +58,7 @@ span.textContent = '0'
 span.style.textAlign = 'right'
 span.style.display = 'block'
 span.style.width = "65%"
+span.style.marginTop = "50px"
 input.type = 'text';
 input.placeholder = "Saisissez des lettres"
 div.appendChild(input)
@@ -98,7 +99,10 @@ for(let i = 0; i < ptohave.length; i++){
 input.addEventListener("input", ()=>{
   const allp = document.querySelectorAll("p");
   for(let i = 0; i < allp.length; i++){
-    if(input.value.indexOf(allp[i].textContent) === -1){
+    if(input.value.length === 0){
+      allp[i].style.display = 'inline-block'
+    }
+    else if(input.value.indexOf(allp[i].textContent) === -1){
       allp[i].style.display = 'none'
     } else{
       allp[i].style.display = 'inline-block'
