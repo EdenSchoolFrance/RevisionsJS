@@ -22,3 +22,30 @@ const getAlphabet = (str) => {
 };
 
 console.log(getAlphabet(""));
+
+const div1 = document.querySelector("#app");
+// console.log(div1, "1");
+
+// const div2 = document.getElementById("app");
+// console.log(div2, "2");
+
+// const div3 = document.getElementsByTagName("div")[0];
+// console.log(div3, "3");
+
+// const div4 = document.querySelector(".container");
+// console.log(div4, "4");
+
+// const div5 = document.getElementsByClassName("container")[0];
+// console.log(div5, "5");
+
+// const div6 = document.querySelector("div#app");
+// console.log(div6, "6");
+
+// const div7 = document.querySelector("div.container");
+// console.log(div7, "7");
+
+// const div8 = document.querySelectorAll("div#app")[0];
+// console.log(div8, "8");
+
+// const div9 = document.querySelectorAll(".container")[0];
+// console.log(div9, "9");
