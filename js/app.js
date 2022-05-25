@@ -1,16 +1,18 @@
 //Display lowercase letters
+let pStringLowercase = document.getElementById('string-Lowercase'); //1st p
 for (let i = 97; i < 123; i++) {
-    console.log(String.fromCharCode(i));
+   pStringLowercase.innerHTML+=(String.fromCharCode(i));
 }
 
 //Display uppercase letters
+let pStringUppercase = document.getElementById('string-Uppercase'); //2nd p
 let tmp = 64;
 while (tmp < 90) {
     tmp++;
-    console.log(String.fromCharCode(tmp));
+    pStringUppercase.innerHTML+=(String.fromCharCode(tmp));
 }
 
-//2
+//getAlphabet function
 function getAlphabet(tmp2) {
     for (let i = 65; i < 91; i++) {
             tmp2+=String.fromCharCode((i));
@@ -20,9 +22,9 @@ function getAlphabet(tmp2) {
     }
     return tmp2;
 }
-
 let result = getAlphabet("");
-console.log(result);
+const getAlphabetResult = document.getElementById('getAlphabet-Result').innerHTML=result;
+
 // const car le résultat ne changera pas si le code n'est pas modifié
 
 function useOf(result, letter) {
@@ -53,14 +55,11 @@ querry2.appendChild(input);
 input.setAttribute('type', 'text');
 querry2.innerHTML;
 input.placeholder="Saisissez des lettres";
-const p = document.querySelector('p');
+const pInputValue = document.getElementById('input-Value');
 
-input.addEventListener('change', ()=>{
-    innerHTML= input.onchange;
+input.addEventListener('change', (e)=>{
+    pInputValue.innerHTML=e.target.value.length;
 })
 
-//input.addEventListener('keydown', ()=>{
-//   p.innerHTML=input.value.length + 1;
-//})
-
+//Style
 
