@@ -82,7 +82,6 @@ for (let i = 0; i < alletter.length; i++) {
 }
 
 window.addEventListener("resize", (reportWindowSize) => {
-  console.log(window.innerWidth);
   if (window.innerWidth <= 1224) {
     div.style.maxWidth = "900px";
   }
@@ -116,13 +115,12 @@ input.addEventListener("input", () => {
 
 check.addEventListener("click", () => {
   const allp = document.querySelectorAll("p");
-  let voyelle = "AEIOUY";
+  let voyelle = "AEIOUYaeiouy";
   if (check.checked) {
     for (let i = 0; i < allp.length; i++) {
       allp[i].style.background = "none";
       if (voyelle.indexOf(allp[i].textContent) !== -1) {
         allp[i].style.background = "red";
-        console.log(allp[i]);
       }
     }
   } else {
@@ -135,10 +133,20 @@ check.addEventListener("click", () => {
   }
 });
 
-// input.addEventListener("input", ()=>{
-//   for(let i = 0; i < input.value.length; i++){
-//     if(input.value.indexOf(input.value[i] === 3)){
-//       alert("doublon")
-//     }
-//   }
-// })
+let tb = [];
+input.addEventListener("input", () => {
+  tb = [];
+  for (let i = 0; i < input.value.length; i++) {
+    if (!tb.includes(input.value[i])) {
+      tb.push(input.value[i]);
+    } else {
+      alert("double");
+      input.value = "";
+      for (let a = 0; a < tb.length; a++) {
+        input.value += tb[a];
+      }
+      tb = [];
+    }
+  }
+  console.log(tb);
+});
