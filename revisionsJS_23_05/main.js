@@ -30,7 +30,6 @@ const getAlphabet = (str) => {
     divltr.style.alignItems = "center";
     divltr.style.lineHeight = "80px";
     divltr.style.height = "80px";
-    divltr.style.border = "1px solid green";
     divltr.style.margin = "10px";
     divcontainer.appendChild(divltr);
     str += String.fromCharCode([i]);

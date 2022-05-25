@@ -1,0 +1,20 @@
+#app {
+  text-align: center;
+}
+
+.ltr-div {
+  border: solid 1px #000;
+}
+
+@media screen and (min-width: 720px) {
+  .ltr-div {
+    border: solid 1px red;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .ltr-div {
+    border: solid 1px green;
+  }
+}
+
