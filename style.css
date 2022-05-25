@@ -23,9 +23,20 @@ p{
   background: gray;
   opacity: 50%;
 }
-input{
+.text{
   position:fixed;
-  margin: 0 -75px;
+  display: inline-block;
+  margin-left: -75px;
+}
+.check{
+  position: fixed;
+  margin-left: 75px;
+}
+.vo{
+  color:red;
+}
+.green{
+  color:green;
 }
 @media screen and (min-width: 768px) {
   .cdiv{

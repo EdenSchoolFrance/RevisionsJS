@@ -44,7 +44,12 @@ label.textContent='lorem impsum'
 qdiv.appendChild(label)
 const input=document.createElement("input")
 input.placeholder='"Saisissez des lettres"'
+input.className="text"
 qdiv.appendChild(input)
+const check=document.createElement('input')
+check.type="checkbox"
+check.className="check"
+qdiv.appendChild(check)
 const p = document.createElement('p')
 p.textContent=0
 qdiv.appendChild(p)
@@ -70,6 +75,46 @@ input.addEventListener("input",()=>{
     }
     else{
       d[i].style.display="none"
+    }
+  }
+})
+const cdiv2 = document.querySelectorAll(".cdiv")
+console.log(cdiv2)
+check.addEventListener('change',()=>{
+  if(!(cdiv2[0].classList.contains("vo"))){
+    cdiv2[0].classList.add('vo')
+    cdiv2[4].classList.add('vo')
+    cdiv2[8].classList.add('vo')
+    cdiv2[14].classList.add('vo')
+    cdiv2[20].classList.add('vo')
+    cdiv2[24].classList.add('vo')
+    cdiv2[26].classList.add('vo')
+    cdiv2[30].classList.add('vo')
+    cdiv2[34].classList.add('vo')
+    cdiv2[39].classList.add('vo')
+    cdiv2[45].classList.add('vo')
+    cdiv2[49].classList.add('vo')
+  }
+  else{
+    cdiv2[0].classList.remove('vo')
+    cdiv2[4].classList.remove('vo')
+    cdiv2[8].classList.remove('vo')
+    cdiv2[14].classList.remove('vo')
+    cdiv2[20].classList.remove('vo')
+    cdiv2[24].classList.remove('vo')
+    cdiv2[26].classList.remove('vo')
+    cdiv2[30].classList.remove('vo')
+    cdiv2[34].classList.remove('vo')
+    cdiv2[39].classList.remove('vo')
+    cdiv2[45].classList.remove('vo')
+    cdiv2[49].classList.remove('vo')
+  }
+  for (let i = 0; i < cdiv2.length; i++) {
+    if(!(cdiv2[i].classList.contains('vo'))&&cdiv2[0].classList.contains('vo')){
+      cdiv2[i].classList.add('green')
+    }
+    else{
+      cdiv2[i].classList.remove('green')
     }
   }
 })
