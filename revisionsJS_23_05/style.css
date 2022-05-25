@@ -6,3 +6,21 @@
   color: #2c3e50;
   margin-top: 60px;
 }
+
+@media screen and (max-width: 460px) {
+  #app p {
+    border: solid green 1px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #app p {
+    border: solid red 1px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #app p {
+    border: solid black 1px;
+  }
+}
