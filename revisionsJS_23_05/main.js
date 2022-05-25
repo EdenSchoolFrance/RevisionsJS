@@ -66,9 +66,8 @@ input.addEventListener("keypress", () => {
   underInput.style.border = "solid 1px";
   underInput.innerHTML = `${getAlphabet()[counter]}`;
   if (counter < 51) {
-  counter ++;
-   } else {
-     counter = 0;
-   }
+    counter++;
+  } else {
+    counter = 0;
+  }
 });
-
