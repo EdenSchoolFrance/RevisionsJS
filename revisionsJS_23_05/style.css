@@ -1,8 +1,58 @@
+body{
+  margin: 0;
+}
+header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem;
+  background-color: white;
+  text-align: center;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+ul{
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+li{
+  line-height: 5rem;
+  text-align: center;
+  border: solid green 2px;
+}
+li:nth-child(5n){
+  background-color: gray;
+}
+.desktop li{
+  flex: 0 0 7.5%
+}
+.tablette li{
+  flex: 0 0 15%
+}
+.smartphone li{
+  flex: 0 0 45%
+}
+
+@media(max-width: 992px) {
+  ul li{
+    border-color: red;
+  }
+}
+@media(max-width: 576px) {
+  ul li{
+    border-color: black;
+  }
 }
