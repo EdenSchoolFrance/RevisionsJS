@@ -54,11 +54,20 @@ const dyn = (getAlphabet) => {
 
 
 // DOM
+
 div.appendChild(input);
+
 const numberOfLetter = document.createElement('div');
 numberOfLetter.classList.add('letterss');
-
+div.appendChild(numberOfLetter);
 input.type = "text";
+
 input.placeholder = "Saisissez des lettres";
 
 // FIN DOM
+
+
+input.addEventListener('keypress', () => {
+  numberOfLetter.innerHTML = `${input.value.length +1}`;
+});
+
