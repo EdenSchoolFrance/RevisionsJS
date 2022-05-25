@@ -66,6 +66,11 @@ let input = document.createElement("input");
 input.placeholder = "Saisissez des lettres";
 div1.appendChild(input);
 
+let checkbox = document.createElement("input");
+checkbox.type = "checkbox";
+
+div1.appendChild(checkbox);
+
 let p = document.createElement("p");
 p.style.margin = "10px 0px 0px 100px";
 div1.appendChild(p);
@@ -77,3 +82,37 @@ setInterval(() => {
 });
 
 console.log(getAlphabet(""));
+
+const divfilter = document.querySelectorAll(".ltr-div");
+
+input.addEventListener("keyup", () => {
+  for (let i = 0; i < divfilter.length; i++) {
+    if (input.value === divfilter[i].textContent) {
+      divfilter[i].style.display = "block";
+    } else if (input.value === "") {
+      divfilter[i].style.display = "block";
+    } else {
+      divfilter[i].style.display = "none";
+    }
+  }
+});
+
+let voyelles = ["A", "E", "I", "O", "U", "Y"];
+
+checkbox.addEventListener("click", () => {
+  for (let i = 0; i < divfilter.length; i++) {
+    console.log(divfilter[i].textContent);
+    if (
+      divfilter[i].textContent === "A" ||
+      divfilter[i].textContent === "E" ||
+      divfilter[i].textContent === "I" ||
+      divfilter[i].textContent === "O" ||
+      divfilter[i].textContent === "U" ||
+      divfilter[i].textContent === "Y"
+    ) {
+      divfilter[i].style.display = "block";
+    } else {
+      divfilter[i].classList.toggle("filternone");
+    }
+  }
+});

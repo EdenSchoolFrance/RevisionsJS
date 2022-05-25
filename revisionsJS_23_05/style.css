@@ -6,6 +6,15 @@
   border: solid 1px #000;
 }
 
+.ltr-div:nth-child(5n) {
+  background: gray;
+  opacity: 50%;
+}
+
+.filternone {
+  display: none;
+}
+
 @media screen and (min-width: 720px) {
   .ltr-div {
     border: solid 1px red;
