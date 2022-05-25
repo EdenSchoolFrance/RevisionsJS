@@ -3,7 +3,7 @@ let resp1 = "";
 let resp2 = "";
 // let div1 = document.querySelector('.container') ;
 // let div2 = document.querySelectorAll('.container') ;
-let div3 = document.getElementById('app');
+let div = document.getElementById('app');
 // let div4 = document.getElementsByClassName('.container') ;
 // let div5 = document.getElementsByTagName('div') ;
 // let div6 = document.getElementsByClassName('.container') ;
@@ -11,7 +11,7 @@ let div3 = document.getElementById('app');
 // let div7 = body.lastChild ;
 // let div8 = document.nodeName ;
 // let div9 = document. ;
-
+const input = document.createElement('input');
 
 
 
@@ -52,4 +52,13 @@ const dyn = (getAlphabet) => {
   return respM;
 }
 
-let rob = div3.appendChild('input');
+
+// DOM
+div.appendChild(input);
+const numberOfLetter = document.createElement('div');
+numberOfLetter.classList.add('letterss');
+
+input.type = "text";
+input.placeholder = "Saisissez des lettres";
+
+// FIN DOM
