@@ -19,7 +19,7 @@ function getAlphabet() {
     }
     tmp.push(String.fromCharCode(i));
   }
-  return tmp.join("");
+  return tmp;
 }
 
 getAlphabet();
@@ -44,6 +44,7 @@ wayThree.appendChild(input);
 const div = document.createElement("div");
 div.style.display = "flex";
 div.style.flexWrap = "wrap";
+div.style.justifyContent = "center"
 
 wayThree.appendChild(div);
 
@@ -57,23 +58,39 @@ input.addEventListener("input", () => {
   lengthOfInput.innerHTML = input.value.split("").length;
 });
 
-for (let getAlphabets of getAlphabet().split("")) {
+for (let getAlphabets of getAlphabet()) {
   const showAlphabet = document.createElement("p");
   showAlphabet.setAttribute("class", "allLetter");
   div.appendChild(showAlphabet);
-  showAlphabet.innerHTML = getAlphabets;
+  if (input.value === "") {
+    showAlphabet.innerHTML = getAlphabets;
+  } 
+
+  function getInputValue () {
+    const allLetter = document.querySelectorAll(".allLetter");
+    let tmp = [];
+    tmp.push(getAlphabet())
+    let a = [];
+    a.push(input.value.split(""))
+
+    for (let i = 0; i < allLetter.length; i++) {
+
+    }
+  }
+  
+  input.addEventListener("input", getInputValue);
 }
 
 const allLetter = document.querySelectorAll(".allLetter");
 
-allLetter.forEach(e => {
-  e.style.border = "1px solid black";
-  e.style.display = "inline";
-  e.style.margin = "1rem";
-  e.style.width = "5rem";
-  e.style.height = "5rem";
-
-  if (allLetter.length % 2 === 0) {
-    console.log()
+for (let i = 0; i < allLetter.length; i++) {
+  allLetter[i].style.border = "1px solid black";
+  allLetter[i].style.display = "inline";
+  allLetter[i].style.margin = "1rem";
+  allLetter[i].style.width = "5rem";
+  allLetter[i].style.padding = "2rem 0";
+  if (i % 5 === 0) {
+    allLetter[i].style.backgroundColor = "rgba(128, 128, 128, .5)";
   }
-})
+}
+

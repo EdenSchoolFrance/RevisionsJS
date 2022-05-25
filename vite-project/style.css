@@ -6,3 +6,20 @@
   color: #2c3e50;
   margin-top: 60px;
 }
+
+#app div p:not(#app div p:first-of-type) {
+  border: 1px solid black;
+}
+
+@media screen and (min-width: 768px) {
+  #app div p:not(#app div p:first-of-type) {
+    border: 1px solid red;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  #app div p:not(#app div p:first-of-type) {
+    border: 1px solid green;
+  }
+}
+
