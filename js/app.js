@@ -23,10 +23,10 @@ function getAlphabet(tmp2) {
     return tmp2;
 }
 let result = getAlphabet("");
-const getAlphabetResult = document.getElementById('getAlphabet-Result').innerHTML=result;
+let getAlphabetResult = document.getElementById('getAlphabet-Result').innerHTML=result;
 
-// const car le résultat ne changera pas si le code n'est pas modifié
-
+//* const car le résultat ne changera pas si le code n'est pas modifié
+// I don't know if the 2nd if(for lowercase) is usefull but I prefered keep it
 function useOf(result, letter) {
     (letter.charCodeAt(letter));
     
@@ -37,7 +37,10 @@ function useOf(result, letter) {
         return false;
     }
 }
+
+const resultUseOf = document.getElementById('getUseOf-Result').innerHTML=
 useOf(result, "E");
+
 
 //DOM-Get div
 //const divId = document.getElementById('app');
@@ -59,7 +62,17 @@ const pInputValue = document.getElementById('input-Value');
 
 input.addEventListener('change', (e)=>{
     pInputValue.innerHTML=e.target.value.length;
+    input.insertAdjacentElement("afterend", pInputValue);
+    pInputValue.style.marginLeft="10.5rem";
 })
 
-//Style
 
+//Display letters in borders (à revoir, non fonctionnel)
+const displayLetters2 = document.getElementById('display-letters');
+function displayLetters(getAlphabet) {
+    for (let i = 0; i < getAlphabet.length; i++) {
+       let allLetters = result[i].innerHTML;
+       allLetters.style.border="solid 2px black";
+    }
+}
+displayLetters(result);
