@@ -76,6 +76,15 @@ input.addEventListener("input",()=>{
     else{
       d[i].style.display="none"
     }
+    for (let n = 0; n < input.value.length; n++) {
+      if(input.value[i]==input.value[n]&&n!=i){
+        let l = input.value.split('')
+        l[l.length-1]=''
+        input.value=l.join('')
+        p.textContent--
+        alert('doublon detecter')
+      }
+    }
   }
 })
 const cdiv2 = document.querySelectorAll(".cdiv")
