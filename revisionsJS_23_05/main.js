@@ -133,8 +133,16 @@ check.addEventListener("click", () => {
   }
 });
 
-let result = confirm("Acceptez-vous de recevoir des pop-up ?");
+if(localStorage.length === 0){
+const result = confirm("Acceptez-vous de recevoir des pop-up ?");  
+if(result === true){
+  localStorage.setItem("Accepté" ,"oui")
+} else{
+  localStorage.setItem("Accepté" ,"non")
+}
+}
 
+console.log(localStorage)
 let tb = [];
 input.addEventListener("input", () => {
   tb = [];
@@ -142,7 +150,7 @@ input.addEventListener("input", () => {
     if (!tb.includes(input.value[i])) {
       tb.push(input.value[i]);
     } else {
-      if (result === true) {
+      if (localStorage.getItem("Accepté") === 'oui') {
         alert("Il y a un doublon");
       }
       input.value = "";
