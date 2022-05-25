@@ -1,58 +1,70 @@
 import "./style.css";
 let resp1 = "";
 let resp2 = "";
-// const div1 = document.querySelector('.container') ;
-// const div2 = document.querySelectorAll('.container') ;
+// const div1 = document.querySelector('.container')[0];
+// const div2 = document.querySelectorAll('.container');
 const div = document.getElementById("app");
-// const div4 = document.getElementsByClassName('.container') ;
-// const div5 = document.getElementsByTagName('div') ;
-// const div6 = document.getElementsByClassName('.container') ;
+// const div4 = document.getElementsByClassName('.container');
+// const div5 = document.getElementsByTagName('div')[0];
+// const div6 = document.getElementsByClassName('.container');
 // const body = document.body;
-// const div7 = body.lastChild ;
-// const div8 = document.nodeName ;
-// const div9 = document. ;
-const input = document.createElement("input");
+// const div7 = body.lastChild;
+// const div8 = document.querySelectorAll('.container')[0];
+// const div9 = document.querySelectorAll('div')[0];
 
 for (let i = 65; i <= 90; i++) {
   resp1 += String.fromCharCode([i]);
 }
 
-for (let i = 97; i <= 122; i++) {
-  resp2 += String.fromCharCode([i]);
-}
-
-const getAlphabet = () => {
-  let tmp = "";
-  for (let i = 65; i <= 90; i++) {
-    tmp += String.fromCharCode([i]);
-  }
-
+// let i = 65;
+// while (i < 91) {
+  //   i++;
+  // }
+  
   for (let i = 97; i <= 122; i++) {
-    tmp += String.fromCharCode([i]);
+    resp2 += String.fromCharCode([i]);
   }
-  return tmp;
-};
+  
+  const getAlphabet = () => {
+    let tmp = "";
+    for (let i = 65; i <= 90; i++) {
+      tmp += String.fromCharCode([i]);
+    }
+    
+    for (let i = 97; i <= 122; i++) {
+      tmp += String.fromCharCode([i]);
+    }
+    return tmp;
+  };
+  
+  // Pour stocker une variable, une constante est appropriée parce qu'on ne changera rien dans celle-ci.
+  
+  const UpperCase = (a, letter)=>{
+    const index = a.indexOf(letter);
+    const code = a.fromCharCode(index);
+    return code < 91;
+  };
+  console.log(UpperCase(getAlphabet, "r"));
+  
+  const dyn = (getAlphabet) => {
+    let respM;
+    for (let i = 0; i < getAlphabet.length; i++) {
+      respM = getAlphabet([i]);
+    }
+    return respM;
+  };
 
-// Pour stocker une variable, une constante est appropriée parce qu'on ne changera rien dans celle-ci.
-
-const dyn = (getAlphabet) => {
-  let respM;
-  for (let i = 0; i < getAlphabet.length; i++) {
-    respM = getAlphabet([i]);
-  }
-  return respM;
-};
-
-// DOM
-
-div.appendChild(input);
-
-const numberOfLetter = document.createElement("div");
-numberOfLetter.classList.add("letterss");
-div.appendChild(numberOfLetter);
-input.type = "text";
-
-input.placeholder = "Saisissez des lettres";
+  // DOM
+  
+  const input = document.createElement("input");
+  div.appendChild(input);
+  
+  const numberOfLetter = document.createElement("div");
+  numberOfLetter.classList.add("letterss");
+  div.appendChild(numberOfLetter);
+  input.type = "text";
+  
+  input.placeholder = "Saisissez des lettres";
 
 // FIN DOM
 let counter = 0;
