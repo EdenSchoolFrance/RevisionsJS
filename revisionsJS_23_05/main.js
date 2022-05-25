@@ -118,16 +118,16 @@ check.addEventListener("click", () => {
   let voyelle = "AEIOUYaeiouy";
   if (check.checked) {
     for (let i = 0; i < allp.length; i++) {
-      allp[i].style.background = "none";
+      allp[i].style.color = "black";
       if (voyelle.indexOf(allp[i].textContent) !== -1) {
-        allp[i].style.background = "red";
+        allp[i].style.color = "red";
       }
     }
   } else {
     for (let i = 0; i < allp.length; i++) {
-      allp[i].style.background = "none";
+      allp[i].style.color = "black";
       if (voyelle.indexOf(allp[i].textContent) === -1) {
-        allp[i].style.background = "green";
+        allp[i].style.color = "rgb(7, 255, 55)";
       }
     }
   }
@@ -148,5 +148,4 @@ input.addEventListener("input", () => {
       tb = [];
     }
   }
-  console.log(tb);
 });
