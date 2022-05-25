@@ -102,14 +102,7 @@ let voyelles = ["A", "E", "I", "O", "U", "Y"];
 checkbox.addEventListener("click", () => {
   for (let i = 0; i < divfilter.length; i++) {
     console.log(divfilter[i].textContent);
-    if (
-      divfilter[i].textContent === "A" ||
-      divfilter[i].textContent === "E" ||
-      divfilter[i].textContent === "I" ||
-      divfilter[i].textContent === "O" ||
-      divfilter[i].textContent === "U" ||
-      divfilter[i].textContent === "Y"
-    ) {
+    if (divfilter[i].textContent.match(voyelles[i])) {
       divfilter[i].style.display = "block";
     } else {
       divfilter[i].classList.toggle("filternone");
