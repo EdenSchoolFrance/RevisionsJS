@@ -133,6 +133,8 @@ check.addEventListener("click", () => {
   }
 });
 
+let result = confirm("Acceptez-vous de recevoir des pop-up ?");
+
 let tb = [];
 input.addEventListener("input", () => {
   tb = [];
@@ -140,7 +142,9 @@ input.addEventListener("input", () => {
     if (!tb.includes(input.value[i])) {
       tb.push(input.value[i]);
     } else {
-      alert("double");
+      if (result === true) {
+        alert("Il y a un doublon");
+      }
       input.value = "";
       for (let a = 0; a < tb.length; a++) {
         input.value += tb[a];
